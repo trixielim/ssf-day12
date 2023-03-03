@@ -43,12 +43,12 @@ public class GenerateRandController {
     //randomising the numbers
     private void randomizerNum(Model m, int noOfGenerateNo){
         int maxGenNo = 31;
-        String[] imgNumbers = new String[maxGenNo+1];
-        if(noOfGenerateNo < 1 || noOfGenerateNo > maxGenNo){
+        String[] imgNumbers = new String[maxGenNo];
+        if(noOfGenerateNo < 1 || noOfGenerateNo > maxGenNo-1){
             throw new RandNoException();
         }
 
-        for(int x = 0; x < maxGenNo -1; x++){
+        for(int x = 0; x < maxGenNo ; x++){
             imgNumbers[x] = "number" + x + ".jpg";
         }
 
